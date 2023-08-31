@@ -117,6 +117,11 @@ app.post('/resume', auth, async (req, res) => {
     }
 });
 
+// API Status
+app.get('/', (req, res) => {
+    res.status(200).json('API is running');
+});
+
 
 // Server
 const PORT = process.env.PORT || 5000;
