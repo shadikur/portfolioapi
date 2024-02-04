@@ -13,7 +13,7 @@ const auth = (req, res, next) => {
     const referrer = req.headers.referer;
     console.log(referrer);
     try {
-        if (referrer === 'https://shadikur.com/' || referrer === 'https://www.shadikur.com/' || referrer === 'http://localhost:5173/') {
+        if (referrer === 'https://shadikur.com/' || referrer === 'https://www.shadikur.com/') {
             next();
         } else {
             res.status(401).send('Unauthorized');
